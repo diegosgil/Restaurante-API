@@ -13,10 +13,10 @@ const usuario_ctr = require("../controllers/usuarios.controller")
 const version = "/api/version1"
 
 router.get(version + "/usuarios", usuario_ctr.consultarUsuarios)
-    .get(version + "/usuarios/:id/documentos/:id_documento?", usuario_ctr.consultarUsuario)   // /usuario/1    usuarios/2
     .post(version + "/usuarios", usuario_ctr.crearUsuario)
-    .put(version + "/usuarios", usuario_ctr.modificarUsuario)
-    .delete(version + "/usuarios", usuario_ctr.eliminarUsuario)
+    .get(version + "/usuarios/:id", usuario_ctr.consultarUsuario)   // /usuario/1    usuarios/2
+    .put(version + "/usuarios/:id", usuario_ctr.modificarUsuario)
+    .delete(version + "/usuarios/:id", usuario_ctr.eliminarUsuario)
 
     
 

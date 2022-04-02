@@ -20,8 +20,7 @@ app.get('/', (req, res) => {
 
 // Puerto donde se levanta el servidor web
 // Puerto donde esta escuchando la API
-const PORT = 3000
-
+const PORT = process.env.PORT 
 // Levantar la API que estará escuchando en el PUERTO 3000
 // 1. Primer parametro: Puerto
 // 2. Segundo parametro: Callback
